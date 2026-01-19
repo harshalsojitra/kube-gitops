@@ -4,3 +4,4 @@ resources:
   - configmap.yaml
   - hpa.yaml
   - secret.yaml  # Make sure this filename matches your secret file!
+  - ingress.yaml
