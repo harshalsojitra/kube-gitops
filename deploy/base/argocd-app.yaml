@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app-gitops
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/harshalsojitra/kube-gitops.git # Change this!
+    targetRevision: HEAD
+    path: deploy/base
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

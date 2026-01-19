@@ -1,0 +1,6 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+  - configmap.yaml
+  - hpa.yaml
+  - secret.yaml  # Make sure this filename matches your secret file!
