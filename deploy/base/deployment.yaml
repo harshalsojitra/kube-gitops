@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: harshalsojitra/kube-gitops-sample:latest
+        image: harshalsojitra/kube-gitops-sample:v2.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
