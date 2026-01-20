@@ -1,0 +1,9 @@
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/harshalsojitra/kube-gitops.git'
+    targetRevision: HEAD
+    path: deploy/overlays/dev  # <--- MUST point here, NOT to base!
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default

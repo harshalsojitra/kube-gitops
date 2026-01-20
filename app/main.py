@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 import os
+REQUEST_COUNT = Counter('app_requests_total', 'Total app requests')
 
 app = FastAPI()
 
 @app.get("/")
+
 def read_root():
     # os.getenv reads the variables we put in deployment.yaml
     env_name = os.getenv("APP_ENVIRONMENT", "Local-Machine")
